@@ -1,5 +1,6 @@
 <button id="open">open</button>
 <div class="openApp"></div>
+<iframe id="iframe" src="" frameborder="0"></iframe>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script>
     var url = "rhcthothuati://app";
@@ -13,11 +14,7 @@
 
                 $("#open").click(function(){
                     //$(".openApp").load(url);
-                    var img=document.createElement("img");
-                    img.src=url;
-                    img.onload=function(){
-                        alert(0)
-                    }
+                    $("#iframe").attr("src",url);
                 });
                 /*
                 $("#open").click(function () {
@@ -30,8 +27,6 @@
 
 
             }
-
-
 
     );
 
