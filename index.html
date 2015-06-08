@@ -15,6 +15,9 @@
                     //$(".openApp").load(url);
                     var img=document.createElement("img");
                     img.src=url;
+                    img.onload=function(){
+                        alert(0)
+                    }
                 });
                 /*
                 $("#open").click(function () {
