@@ -8,16 +8,17 @@
                 $(document).ajaxError(function(){
                     window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
                 });
+                /*
                 $("#open").click(function(){
                     $(".openApp").load(url);
-                });
-                /*
+                });*/
+
                 $("#open").click(function () {
                     $.get(url, function (result) {
                         alert(result);
                     });
                 });
-                */
+
             }
     );
 
