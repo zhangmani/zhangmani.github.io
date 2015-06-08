@@ -1,36 +1,18 @@
-<meta name = "viewport" content ="initial-scale=2.0,maximum-scale=1,user-scalable=no">
-<a href="rhcthothuati://app" >open app</a>
-<button id="open">open</button>
-<div class="openApp"></div>
-<iframe id="iframe" src="" frameborder="0"></iframe>
-<script src="js/jquery-2.1.4.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "viewport" content ="initial-scale=2.0,maximum-scale=1,user-scalable=no">
+    <title>张玛妮</title>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
 <script>
-    var url = "rhcthothuati://app";
     $(document).ready(
             function () {
-                /*
-                $(document).ajaxError(function(){
-                    //window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
-                });
-                */
-
-                $("#open").click(function(){
-                    //$(".openApp").load(url);
-                    $("#iframe").attr("src",url);
-
-                });
-                /*
-                $("#open").click(function () {
-                    $.getJSON(url, function (result) {
-                        alert(result);
-                    });
-                });
-                */
-
-
 
             }
-
     );
-
 </script>
+</body>
+</html>
