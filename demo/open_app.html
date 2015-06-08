@@ -15,35 +15,18 @@
     var url = "rhcthothuati://app";
     $(document).ready(
             function () {
-                /*
-                 $(document).ajaxError(function(){
-                 window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
-                 });
-                 */
-
                 $("#open").click(function () {
-                    var ua = navigator.userAgent;
-                    if (ua.indexOf('MicroMessenger') > 0) {
-                        location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
-                    } else {
-                        var ifr = document.createElement("iframe");
-                        ifr.setAttribute('src', app_url);
-                        ifr.setAttribute('style', 'display:none');
-                        document.body.appendChild(ifr);
-                        setTimeout(function () {
-                            location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
-                        }, 500);
-                    }
-
+                    var this_url=location.href+"";
+                    location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
+                    var a = document.createElement("iframe");
+                    a.src = url;
+                    a.style.display = "none";
+                    document.body.appendChild(a);
+                    window.setTimeout(function () {
+                        document.body.removeChild(a);
+                        location.href=this_url;
+                    }, 100);
                 });
-
-                /*
-                 $("#open").click(function () {
-                 $.get(url, function (result) {
-                 alert(result);
-                 });
-                 });*/
-
             }
     );
 
