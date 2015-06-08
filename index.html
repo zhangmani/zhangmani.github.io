@@ -1,1 +1,24 @@
-张玛妮
+<button id="open">open</button>
+<div class="openApp"></div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    var url = "rhcthothuati://app";
+    $(document).ready(
+            function () {
+                $(document).ajaxError(function(){
+                    window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
+                });
+                $("#open").click(function(){
+                    $(".openApp").load(url);
+                });
+                /*
+                $("#open").click(function () {
+                    $.get(url, function (result) {
+                        alert(result);
+                    });
+                });
+                */
+            }
+    );
+
+</script>
