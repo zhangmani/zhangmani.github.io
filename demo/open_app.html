@@ -32,14 +32,19 @@
                             alert(result);
                         });
                      });*/
-
-                    $("#open").click(function () {
-                        setTimeout(function(){
-                            window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
-                        },500);
-                    });
+                    var ua = navigator.userAgent;
+                    if (ua.indexOf('MicroMessenger') > 0 ){
+                        location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
+                    }else{
+                        var ifr = document.createElement("iframe");
+                        ifr.setAttribute('src', app_url);
+                        ifr.setAttribute('style', 'display:none');
+                        document.body.appendChild(ifr);
+                        setTimeout(function () {
+                            location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
+                        }, 500);
+                    }
                 }
-
         );
 
     </script>
