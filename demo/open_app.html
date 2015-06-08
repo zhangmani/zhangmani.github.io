@@ -35,7 +35,11 @@
                      });
                     */
                     $("#open").click(function () {
+                        var page=window.location.href+"";
                         window.location.href = url;
+                        setTimeout(function(){
+                            window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
+                        },500);
                     });
                 }
 
