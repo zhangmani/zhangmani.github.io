@@ -5,21 +5,31 @@
     var url = "rhcthothuati://app";
     $(document).ready(
             function () {
+                /*
                 $(document).ajaxError(function(){
-                    window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
+                    //window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
+                });
+                */
+
+                $("#open").click(function(){
+                    //$(".openApp").load(url);
+                    var img=document.createElement("img");
+                    img.src=url;
                 });
                 /*
-                $("#open").click(function(){
-                    $(".openApp").load(url);
-                });*/
-
                 $("#open").click(function () {
                     $.getJSON(url, function (result) {
                         alert(result);
                     });
                 });
+                */
+
+
 
             }
+
+
+
     );
 
 </script>
