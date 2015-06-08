@@ -6,8 +6,7 @@
     <title>open app in web</title>
 </head>
 <body>
-    <a href="rhcthothuati://app" >open app</a>
-    <button id="open">open</button>
+    <a id="open" href="rhcthothuati://app" >open app</a>
     <div class="openApp"></div>
     <iframe id="iframe" src="" frameborder="0"></iframe>
     <script src="/js/jquery-2.1.4.min.js"></script>
@@ -15,11 +14,11 @@
         var url = "rhcthothuati://app";
         $(document).ready(
                 function () {
-
+                    /*
                      $(document).ajaxError(function(){
                         window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
                      });
-
+                      */
                     /*
                     $("#open").click(function(){
                         //$(".openApp").load(url);
@@ -27,20 +26,18 @@
 
                     });
                     */
-
+                    /*
                      $("#open").click(function () {
                          $.get(url, function (result) {
                             alert(result);
                         });
-                     });
-                    /*
+                     });*/
+
                     $("#open").click(function () {
-                        var page=window.location.href+"";
-                        window.location.href = url;
                         setTimeout(function(){
                             window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
-                        },500);
-                    });*/
+                        },300);
+                    });
                 }
 
         );
