@@ -2,40 +2,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name = "viewport" content ="initial-scale=2.0,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="initial-scale=2.0,maximum-scale=1,user-scalable=no">
     <title>open app in web</title>
 </head>
 <body>
-    <a id="open" href="rhcthothuati://app" >open app</a>
-    <div class="openApp"></div>
-    <iframe id="iframe" src="" frameborder="0"></iframe>
-    <script src="/js/jquery-2.1.4.min.js"></script>
-    <script>
-        var url = "rhcthothuati://app";
-        $(document).ready(
-                function () {
-                    /*
-                     $(document).ajaxError(function(){
-                        window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
-                     });
-                      */
-                    /*
-                    $("#open").click(function(){
-                        //$(".openApp").load(url);
-                        $("#iframe").attr("src",url);
+<a id="open" href="rhcthothuati://app">open app</a>
 
-                    });
-                    */
-                    /*
-                     $("#open").click(function () {
-                         $.get(url, function (result) {
-                            alert(result);
-                        });
-                     });*/
+<div class="openApp"></div>
+<iframe id="iframe" src="" frameborder="0"></iframe>
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script>
+    var url = "rhcthothuati://app";
+    $(document).ready(
+            function () {
+                /*
+                 $(document).ajaxError(function(){
+                 window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp";
+                 });
+                 */
+
+                $("#open").click(function () {
                     var ua = navigator.userAgent;
-                    if (ua.indexOf('MicroMessenger') > 0 ){
+                    if (ua.indexOf('MicroMessenger') > 0) {
                         location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
-                    }else{
+                    } else {
                         var ifr = document.createElement("iframe");
                         ifr.setAttribute('src', app_url);
                         ifr.setAttribute('style', 'display:none');
@@ -44,9 +34,19 @@
                             location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.rhct.android.rhctapp';
                         }, 500);
                     }
-                }
-        );
 
-    </script>
+                });
+
+                /*
+                 $("#open").click(function () {
+                 $.get(url, function (result) {
+                 alert(result);
+                 });
+                 });*/
+
+            }
+    );
+
+</script>
 </body>
 </html>
