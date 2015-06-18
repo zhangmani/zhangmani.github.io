@@ -5,12 +5,12 @@ var zp = {
     r: 0,//单个角度
     this_index: 1,//当前指向的 item 序列
     items: [
-        {index: 1, name: "1",info:"没抽中啊，继续努力吧！",state:0, rand: 1},
-        {index: 2, name: "2",info:"",state:1, rand: 0},
-        {index: 3, name: "3",info:"额，不要气馁啊！",state:1, rand: 1},
-        {index: 4, name: "4",info:"",state:1, rand: 0},
-        {index: 5, name: "5",info:"不中奖也没关系的。。。",state:1, rand: 1},
-        {index: 6, name: "6",info:"",state:1, rand: 0},
+        {index: 1, name: "1",info:"",state:0, rand: 0},
+        {index: 2, name: "2",info:"没抽中啊，继续努力吧！",state:1, rand: 1},
+        {index: 3, name: "3",info:"",state:0, rand: 0},
+        {index: 4, name: "4",info:"额，不要气馁啊！",state:1, rand: 1},
+        {index: 5, name: "5",info:"",state:0, rand: 0},
+        {index: 6, name: "6",info:"不中奖也没关系的。。。",state:1, rand: 1},
     ],
     random_index: [],
     init: function (e) {
@@ -33,7 +33,7 @@ var zp = {
         }
 
         zp.e = document.getElementById("zp");
-        zp.e.style.webkitTransition = "cubic-bezier(0,0,1,5) 5s";
+        zp.e.style.webkitTransition = "all 5s";
         zp.e.addEventListener("webkitTransitionEnd", function () {
             zp.count--;
             console.log(zp.get);

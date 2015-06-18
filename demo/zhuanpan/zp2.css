@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#page{
+    width: 375px;
+    margin: 0 auto;
+    position: relative;
+}
+.bg{
+    width: 100%;
+}
+.zp{
+    position: absolute;
+    left: 48px;
+    top: 210px;
+    background: url("zhuanpan.png");
+    background-size: 100%;
+    width: 263px;
+    height: 263px;
+}
+.btnbg{
+    position: absolute;
+    left:22px;
+    top: 210px;
+    width: 263px;
+    height: 263px;
+    background: url("btn.png");
+    background-position: 105px center;
+    background-size:100px;
+    background-repeat: no-repeat;
+}
+.btn{
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    top: 512px;
+    left: 225px;
+    cursor: pointer;
+}
