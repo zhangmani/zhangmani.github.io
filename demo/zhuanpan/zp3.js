@@ -32,7 +32,6 @@ var zp = {
             }
 
         }
-        zp.max_Num = 360 * 10;
         zp.e = document.getElementById("zp");
         /*
 
@@ -71,7 +70,8 @@ var zp = {
 
             } else {
 
-
+                var q = Math.round(zp.num / 360) + 12;
+                zp.max_Num += q * 360+zp.r;
                 function ring(n) {
                     if (zp.stoped) {
 
@@ -110,16 +110,17 @@ var zp = {
 
     },
     alert:function (obj) {
-    if (!obj) {
-        alert("您已经抽过奖了");
-    } else {
-        if (obj.state === 1) {
-            //ajax to server
+        if (!obj) {
+            alert("您已经抽过奖了");
+        } else {
+            if (obj.state === 1) {
+                //ajax to server
 
+            }
+            alert(obj.info);
         }
-        alert(obj.info);
+        zp.stoped=false;
     }
-}
 }
 var _ = {
     local: {
